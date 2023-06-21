@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7i3wh147wc7f"]
+
+[ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/interactable_example_1.tscn" id="1_ljgv5"]
+[ext_resource type="PackedScene" uid="uid://chjeixeop8gwx" path="res://player.tscn" id="2_idt1h"]
+[ext_resource type="PackedScene" uid="uid://dugrjgfflofjk" path="res://Interactables/interactable_example_2.tscn" id="3_tgmgo"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_idt1h")]
+
+[node name="interactable_1_test" parent="." instance=ExtResource("1_ljgv5")]
+
+[node name="interactable_2" parent="." instance=ExtResource("3_tgmgo")]
