@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk8ana3ccbmsi"]
+
+[ext_resource type="PackedScene" uid="uid://ca6vybvs85vbd" path="res://Interactables/base/interactable_base.tscn" id="1_phy6f"]
+[ext_resource type="Script" path="res://Interactables/Portal.gd" id="2_ohp8b"]
+
+[node name="portal" instance=ExtResource("1_phy6f")]
+script = ExtResource("2_ohp8b")

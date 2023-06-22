@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfy60j3vhp0q0"]
 
-[ext_resource type="Script" path="res://Interactables/interactable_example_1.gd" id="1_l7faq"]
+[ext_resource type="Script" path="res://Interactables/Door.gd" id="1_yhqwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl4kc"]
 
-[node name="interactable_1_test" type="Area2D" groups=["Interactable"]]
-script = ExtResource("1_l7faq")
+[node name="Door" type="Area2D" groups=["Interactable"]]
+script = ExtResource("1_yhqwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gl4kc")

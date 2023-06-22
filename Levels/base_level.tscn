@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://bt2j2b4d2nmo4"]
+[gd_scene load_steps=9 format=3 uid="uid://bt2j2b4d2nmo4"]
+
+[ext_resource type="Script" path="res://Levels/base_level.gd" id="1_30kel"]
+[ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/Door.tscn" id="1_ukxml"]
+[ext_resource type="PackedScene" uid="uid://ccs1r1p65nfc4" path="res://World/basic_platform.tscn" id="2_0awvr"]
+[ext_resource type="PackedScene" uid="uid://cx2u8krtx1ctg" path="res://Locations/start_location.tscn" id="3_irplj"]
+[ext_resource type="PackedScene" uid="uid://dxpuxy8cv8rkx" path="res://Triggers/base_trigger.tscn" id="4_3tjuq"]
+[ext_resource type="PackedScene" uid="uid://bk8ana3ccbmsi" path="res://Interactables/Portal.tscn" id="5_n8mnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg46i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhfw8"]
 
 [node name="base_level" type="Node2D"]
+script = ExtResource("1_30kel")
+
+[node name="Door" parent="." instance=ExtResource("1_ukxml")]
+position = Vector2(1168, 464)
+
+[node name="basic_platform" parent="." instance=ExtResource("2_0awvr")]
+position = Vector2(80, 600)
+
+[node name="basic_platform2" parent="." instance=ExtResource("2_0awvr")]
+position = Vector2(216, 600)
+
+[node name="basic_platform3" parent="." instance=ExtResource("2_0awvr")]
+position = Vector2(384, 600)
+
+[node name="Start Location" parent="." instance=ExtResource("3_irplj")]
+
+[node name="Death Trigger" parent="." instance=ExtResource("4_3tjuq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Trigger"]
+shape = SubResource("RectangleShape2D_rg46i")
+
+[node name="portal" parent="." node_paths=PackedStringArray("destination_portal") instance=ExtResource("5_n8mnm")]
+destination_portal = NodePath("../portal2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
+shape = SubResource("RectangleShape2D_jhfw8")
+
+[node name="portal2" parent="." node_paths=PackedStringArray("destination_portal") instance=ExtResource("5_n8mnm")]
+destination_portal = NodePath("../portal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal2"]
+shape = SubResource("RectangleShape2D_jhfw8")

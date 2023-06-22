@@ -21,7 +21,3 @@ func load_next_level():
 func finish_level_transition():
 	animPlayer.play_backwards("Level Completed")
 	
-
-func _process(delta):
-	if Input.is_action_just_pressed("Interact"):
-		GameEventBus.emit_signal("level_completed")
