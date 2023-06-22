@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc1mm5q7dqup5"]
+
+[ext_resource type="Script" path="res://Globals/Game Event Bus.gd" id="1_v2hn6"]
+
+[node name="Game Event Bus" type="Node2D"]
+script = ExtResource("1_v2hn6")
