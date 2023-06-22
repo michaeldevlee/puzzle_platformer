@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpfs17kddyold"]
+[gd_scene load_steps=4 format=3 uid="uid://bpfs17kddyold"]
 
 [ext_resource type="PackedScene" uid="uid://bt2j2b4d2nmo4" path="res://Levels/base_level.tscn" id="1_e4ta6"]
-[ext_resource type="Texture2D" uid="uid://87i0ltjog3bq" path="res://icon.svg" id="2_2cgbc"]
 [ext_resource type="PackedScene" uid="uid://bk8ana3ccbmsi" path="res://Interactables/Portal.tscn" id="4_u50lm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8m703"]
@@ -12,7 +11,6 @@
 
 [node name="Icon" type="Sprite2D" parent="." index="1"]
 position = Vector2(320, 168)
-texture = ExtResource("2_2cgbc")
 
 [node name="portal3" parent="." index="10" instance=ExtResource("4_u50lm")]
 
