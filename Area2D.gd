@@ -19,6 +19,9 @@ func is_interactable(area):
 		overlapping_interactables.append(area)
 		can_interact = true
 		current_interactable = area
+	
+	if area is Collectible:
+		area.collect()
 
 func not_interactable(area):
 	if area.is_in_group("Interactable"):
@@ -32,5 +35,5 @@ func not_interactable(area):
 			print('no more to interact with')
 		
 func _process(delta):
-	if Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_just_pressed("Interact"):
 		interact()
