@@ -172,6 +172,7 @@ position = Vector2(80, 220)
 
 [node name="Fake Door" parent="." index="3" instance=ExtResource("5_5ersf")]
 position = Vector2(268, 172)
+type = "FAKE"
 
 [node name="Real Door" parent="." index="4" instance=ExtResource("5_5ersf")]
 position = Vector2(272, 56)
