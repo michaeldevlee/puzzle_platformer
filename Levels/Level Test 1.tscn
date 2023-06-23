@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpfs17kddyold"]
+[gd_scene load_steps=4 format=3 uid="uid://b8isqgwj6tcuu"]
 
 [ext_resource type="PackedScene" uid="uid://bt2j2b4d2nmo4" path="res://Levels/base_level.tscn" id="1_e4ta6"]
 [ext_resource type="PackedScene" uid="uid://bk8ana3ccbmsi" path="res://Interactables/Portal.tscn" id="4_u50lm"]
@@ -12,7 +12,7 @@
 [node name="Icon" type="Sprite2D" parent="." index="1"]
 position = Vector2(320, 168)
 
-[node name="portal3" parent="." index="10" instance=ExtResource("4_u50lm")]
+[node name="portal3" parent="." index="3" instance=ExtResource("4_u50lm")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal3" index="0"]
 shape = SubResource("RectangleShape2D_8m703")

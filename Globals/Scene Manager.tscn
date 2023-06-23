@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1ex3f8wv0bno"]
 
 [ext_resource type="Script" path="res://Globals/Scene Manager.gd" id="1_upjom"]
-[ext_resource type="PackedScene" uid="uid://bpfs17kddyold" path="res://Levels/Level Test 1.tscn" id="2_lnaat"]
+[ext_resource type="PackedScene" uid="uid://bpfs17kddyold" path="res://Levels/Level 1.tscn" id="2_lnaat"]
 [ext_resource type="PackedScene" uid="uid://dbdocamah70f1" path="res://Levels/Level Test 2.tscn" id="3_hpd3h"]
 [ext_resource type="PackedScene" uid="uid://2mfeg7xlovcd" path="res://Levels/Level Test 3.tscn" id="4_fk2qs"]
 

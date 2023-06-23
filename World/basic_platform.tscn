@@ -1,5 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccs1r1p65nfc4"]
+[gd_scene load_steps=3 format=3 uid="uid://ccs1r1p65nfc4"]
 
 [ext_resource type="PackedScene" uid="uid://c5vgq0wgjyv54" path="res://World/base_platform.tscn" id="1_xv5sw"]
+[ext_resource type="Texture2D" uid="uid://87i0ltjog3bq" path="res://icon.svg" id="2_bii2u"]
 
 [node name="basic_platform" instance=ExtResource("1_xv5sw")]
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_bii2u")

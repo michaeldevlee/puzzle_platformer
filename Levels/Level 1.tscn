@@ -1,0 +1,185 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpfs17kddyold"]
+
+[ext_resource type="PackedScene" uid="uid://bt2j2b4d2nmo4" path="res://Levels/base_level.tscn" id="1_54dcd"]
+[ext_resource type="PackedScene" uid="uid://ccs1r1p65nfc4" path="res://World/basic_platform.tscn" id="2_urok8"]
+[ext_resource type="PackedScene" uid="uid://chjeixeop8gwx" path="res://player.tscn" id="4_vnppk"]
+[ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/Door.tscn" id="5_5ersf"]
+
+[node name="Level 1" instance=ExtResource("1_54dcd")]
+
+[node name="Terrain" type="Node2D" parent="." index="0"]
+
+[node name="basic_platform" parent="Terrain" index="0" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 254)
+
+[node name="basic_platform16" parent="Terrain" index="1" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 222)
+
+[node name="basic_platform17" parent="Terrain" index="2" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 190)
+
+[node name="basic_platform18" parent="Terrain" index="3" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 158)
+
+[node name="basic_platform19" parent="Terrain" index="4" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 126)
+
+[node name="basic_platform20" parent="Terrain" index="5" instance=ExtResource("2_urok8")]
+position = Vector2(-16, 94)
+
+[node name="basic_platform14" parent="Terrain" index="6" instance=ExtResource("2_urok8")]
+position = Vector2(736, 192)
+
+[node name="basic_platform42" parent="Terrain" index="7" instance=ExtResource("2_urok8")]
+position = Vector2(736, 160)
+
+[node name="basic_platform49" parent="Terrain" index="8" instance=ExtResource("2_urok8")]
+position = Vector2(736, 128)
+
+[node name="basic_platform50" parent="Terrain" index="9" instance=ExtResource("2_urok8")]
+position = Vector2(736, 96)
+
+[node name="basic_platform51" parent="Terrain" index="10" instance=ExtResource("2_urok8")]
+position = Vector2(736, 64)
+
+[node name="basic_platform52" parent="Terrain" index="11" instance=ExtResource("2_urok8")]
+position = Vector2(736, 32)
+
+[node name="basic_platform2" parent="Terrain" index="12" instance=ExtResource("2_urok8")]
+position = Vector2(16, 256)
+
+[node name="basic_platform3" parent="Terrain" index="13" instance=ExtResource("2_urok8")]
+position = Vector2(48, 256)
+
+[node name="basic_platform4" parent="Terrain" index="14" instance=ExtResource("2_urok8")]
+position = Vector2(80, 256)
+
+[node name="basic_platform5" parent="Terrain" index="15" instance=ExtResource("2_urok8")]
+position = Vector2(112, 256)
+
+[node name="basic_platform6" parent="Terrain" index="16" instance=ExtResource("2_urok8")]
+position = Vector2(144, 256)
+
+[node name="basic_platform7" parent="Terrain" index="17" instance=ExtResource("2_urok8")]
+position = Vector2(176, 256)
+
+[node name="basic_platform8" parent="Terrain" index="18" instance=ExtResource("2_urok8")]
+position = Vector2(208, 256)
+
+[node name="basic_platform9" parent="Terrain" index="19" instance=ExtResource("2_urok8")]
+position = Vector2(240, 256)
+
+[node name="basic_platform10" parent="Terrain" index="20" instance=ExtResource("2_urok8")]
+position = Vector2(272, 256)
+
+[node name="basic_platform11" parent="Terrain" index="21" instance=ExtResource("2_urok8")]
+position = Vector2(304, 256)
+
+[node name="basic_platform12" parent="Terrain" index="22" instance=ExtResource("2_urok8")]
+position = Vector2(336, 256)
+
+[node name="basic_platform13" parent="Terrain" index="23" instance=ExtResource("2_urok8")]
+position = Vector2(368, 256)
+
+[node name="basic_platform21" parent="Terrain" index="24" instance=ExtResource("2_urok8")]
+position = Vector2(400, 256)
+
+[node name="basic_platform22" parent="Terrain" index="25" instance=ExtResource("2_urok8")]
+position = Vector2(432, 256)
+
+[node name="basic_platform23" parent="Terrain" index="26" instance=ExtResource("2_urok8")]
+position = Vector2(464, 256)
+
+[node name="basic_platform24" parent="Terrain" index="27" instance=ExtResource("2_urok8")]
+position = Vector2(496, 256)
+
+[node name="basic_platform25" parent="Terrain" index="28" instance=ExtResource("2_urok8")]
+position = Vector2(528, 256)
+
+[node name="basic_platform26" parent="Terrain" index="29" instance=ExtResource("2_urok8")]
+position = Vector2(560, 256)
+
+[node name="basic_platform27" parent="Terrain" index="30" instance=ExtResource("2_urok8")]
+position = Vector2(592, 256)
+
+[node name="basic_platform28" parent="Terrain" index="31" instance=ExtResource("2_urok8")]
+position = Vector2(624, 256)
+
+[node name="basic_platform29" parent="Terrain" index="32" instance=ExtResource("2_urok8")]
+position = Vector2(540, 188)
+
+[node name="basic_platform30" parent="Terrain" index="33" instance=ExtResource("2_urok8")]
+position = Vector2(572, 188)
+
+[node name="basic_platform31" parent="Terrain" index="34" instance=ExtResource("2_urok8")]
+position = Vector2(604, 188)
+
+[node name="basic_platform32" parent="Terrain" index="35" instance=ExtResource("2_urok8")]
+position = Vector2(636, 188)
+
+[node name="basic_platform33" parent="Terrain" index="36" instance=ExtResource("2_urok8")]
+position = Vector2(668, 128)
+
+[node name="basic_platform34" parent="Terrain" index="37" instance=ExtResource("2_urok8")]
+position = Vector2(700, 128)
+
+[node name="basic_platform35" parent="Terrain" index="38" instance=ExtResource("2_urok8")]
+position = Vector2(556, 76)
+
+[node name="basic_platform36" parent="Terrain" index="39" instance=ExtResource("2_urok8")]
+position = Vector2(588, 76)
+
+[node name="basic_platform39" parent="Terrain" index="40" instance=ExtResource("2_urok8")]
+position = Vector2(460, 28)
+
+[node name="basic_platform40" parent="Terrain" index="41" instance=ExtResource("2_urok8")]
+position = Vector2(492, 28)
+
+[node name="basic_platform41" parent="Terrain" index="42" instance=ExtResource("2_urok8")]
+position = Vector2(304, 88)
+
+[node name="basic_platform43" parent="Terrain" index="43" instance=ExtResource("2_urok8")]
+position = Vector2(240, 88)
+
+[node name="basic_platform44" parent="Terrain" index="44" instance=ExtResource("2_urok8")]
+position = Vector2(272, 88)
+
+[node name="basic_platform45" parent="Terrain" index="45" instance=ExtResource("2_urok8")]
+position = Vector2(284, 204)
+
+[node name="basic_platform46" parent="Terrain" index="46" instance=ExtResource("2_urok8")]
+position = Vector2(316, 204)
+
+[node name="basic_platform47" parent="Terrain" index="47" instance=ExtResource("2_urok8")]
+position = Vector2(220, 204)
+
+[node name="basic_platform48" parent="Terrain" index="48" instance=ExtResource("2_urok8")]
+position = Vector2(252, 204)
+
+[node name="basic_platform37" parent="Terrain" index="49" instance=ExtResource("2_urok8")]
+position = Vector2(396, 156)
+
+[node name="basic_platform38" parent="Terrain" index="50" instance=ExtResource("2_urok8")]
+position = Vector2(428, 156)
+
+[node name="Start Location" parent="." index="1"]
+position = Vector2(80, 220)
+
+[node name="Fake Door" parent="." index="2" instance=ExtResource("5_5ersf")]
+position = Vector2(268, 172)
+
+[node name="Real Door" parent="." index="3" instance=ExtResource("5_5ersf")]
+position = Vector2(272, 56)
+
+[node name="Player" parent="." index="4" instance=ExtResource("4_vnppk")]
+position = Vector2(124, 180)
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="3"]
+limit_left = 0
+limit_top = 0
+limit_right = 720
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
