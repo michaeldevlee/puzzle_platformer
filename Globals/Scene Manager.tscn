@@ -1,13 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1ex3f8wv0bno"]
+[gd_scene load_steps=7 format=3 uid="uid://b1ex3f8wv0bno"]
 
 [ext_resource type="Script" path="res://Globals/Scene Manager.gd" id="1_upjom"]
-[ext_resource type="PackedScene" uid="uid://bpfs17kddyold" path="res://Levels/Level 1.tscn" id="2_lnaat"]
 [ext_resource type="PackedScene" uid="uid://dbdocamah70f1" path="res://Levels/Level Test 2.tscn" id="3_hpd3h"]
 [ext_resource type="PackedScene" uid="uid://2mfeg7xlovcd" path="res://Levels/Level Test 3.tscn" id="4_fk2qs"]
 
 [sub_resource type="Animation" id="Animation_d8rt5"]
 resource_name = "Level Completed Fade"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,7 +14,7 @@ tracks/0/path = NodePath("TransitionScreen:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1.7, 2),
+"times": PackedFloat32Array(1, 1.3, 2.7, 3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -58,7 +57,7 @@ _data = {
 
 [node name="Scene Manager" type="CanvasLayer"]
 script = ExtResource("1_upjom")
-level_list = Array[PackedScene]([ExtResource("2_lnaat"), ExtResource("3_hpd3h"), ExtResource("4_fk2qs"), null])
+level_list = Array[PackedScene]([ExtResource("3_hpd3h"), ExtResource("4_fk2qs"), null])
 
 [node name="TransitionScreen" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)

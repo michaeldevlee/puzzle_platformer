@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpfs17kddyold"]
+[gd_scene load_steps=6 format=3 uid="uid://bpfs17kddyold"]
 
 [ext_resource type="PackedScene" uid="uid://bt2j2b4d2nmo4" path="res://Levels/base_level.tscn" id="1_54dcd"]
 [ext_resource type="PackedScene" uid="uid://ccs1r1p65nfc4" path="res://World/basic_platform.tscn" id="2_urok8"]
 [ext_resource type="PackedScene" uid="uid://chjeixeop8gwx" path="res://player.tscn" id="4_vnppk"]
+[ext_resource type="Texture2D" uid="uid://lnpqlx6ai8nt" path="res://Images/BACKGROUND.png" id="5_2rpp1"]
 [ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/Door.tscn" id="5_5ersf"]
 
 [node name="Level 1" instance=ExtResource("1_54dcd")]
 
-[node name="Terrain" type="Node2D" parent="." index="0"]
+[node name="Background" type="Sprite2D" parent="." index="0"]
+position = Vector2(240, 136)
+texture = ExtResource("5_2rpp1")
+
+[node name="Terrain" type="Node2D" parent="." index="1"]
 
 [node name="basic_platform" parent="Terrain" index="0" instance=ExtResource("2_urok8")]
 position = Vector2(-16, 254)
@@ -162,16 +167,16 @@ position = Vector2(396, 156)
 [node name="basic_platform38" parent="Terrain" index="50" instance=ExtResource("2_urok8")]
 position = Vector2(428, 156)
 
-[node name="Start Location" parent="." index="1"]
+[node name="Start Location" parent="." index="2"]
 position = Vector2(80, 220)
 
-[node name="Fake Door" parent="." index="2" instance=ExtResource("5_5ersf")]
+[node name="Fake Door" parent="." index="3" instance=ExtResource("5_5ersf")]
 position = Vector2(268, 172)
 
-[node name="Real Door" parent="." index="3" instance=ExtResource("5_5ersf")]
+[node name="Real Door" parent="." index="4" instance=ExtResource("5_5ersf")]
 position = Vector2(272, 56)
 
-[node name="Player" parent="." index="4" instance=ExtResource("4_vnppk")]
+[node name="Player" parent="." index="5" instance=ExtResource("4_vnppk")]
 position = Vector2(124, 180)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
