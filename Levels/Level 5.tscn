@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bhjbhmvinypbi" path="res://Collectibles/Life/Life.tscn" id="10_7h67n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64lmu"]
-size = Vector2(772, 30)
+size = Vector2(982, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8kk0"]
 size = Vector2(196, 20)
@@ -23,7 +23,7 @@ size = Vector2(196, 20)
 size = Vector2(116, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkcut"]
-size = Vector2(480, 20)
+size = Vector2(636, 20)
 
 [node name="Level 5" node_paths=PackedStringArray("player", "start_point", "reset_node_group") instance=ExtResource("1_bpj2a")]
 player_jumps = 5
@@ -220,7 +220,6 @@ position = Vector2(160, 672)
 
 [node name="Door2" parent="Door" index="7" instance=ExtResource("6_er2il")]
 position = Vector2(120, 648)
-type = "FAKE"
 
 [node name="Player" parent="." index="5" node_paths=PackedStringArray("camera") instance=ExtResource("7_r1rw4")]
 position = Vector2(80, 220)
@@ -244,11 +243,11 @@ drag_vertical_enabled = true
 position = Vector2(276, 304)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death Trigger" index="0"]
-position = Vector2(394, 5)
+position = Vector2(500, 0)
 shape = SubResource("RectangleShape2D_64lmu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Triggers/Death Trigger" index="1"]
-position = Vector2(104, 456)
+position = Vector2(-1, 456)
 shape = SubResource("RectangleShape2D_64lmu")
 
 [node name="Remove Terrain Trigger" parent="Triggers" index="1" node_paths=PackedStringArray("terrain_group") instance=ExtResource("8_ywikx")]
@@ -279,5 +278,5 @@ side = 1
 trigger_type = "CAMERA"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Reset Nodes/change_camera_trigger2" index="0"]
-position = Vector2(180, 0)
+position = Vector2(258, 0)
 shape = SubResource("RectangleShape2D_xkcut")

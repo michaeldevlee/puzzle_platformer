@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyqip6fb2l8n5"]
+[gd_scene load_steps=4 format=3 uid="uid://cyqip6fb2l8n5"]
 
 [ext_resource type="AudioStream" uid="uid://c50kfb3boprmo" path="res://Assets/Music/gameplay.ogg" id="1_mmkca"]
 [ext_resource type="Script" path="res://Globals/AudioPlayer.gd" id="2_p4wcy"]
+[ext_resource type="AudioStream" uid="uid://bdsacauhf25ja" path="res://Assets/Jump/Jump.wav" id="3_0hinn"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_p4wcy")
+
+[node name="Music Player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_mmkca")
 volume_db = -10.0
-script = ExtResource("2_p4wcy")
+autoplay = true
+
+[node name="SFX Player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0hinn")
+volume_db = -10.0

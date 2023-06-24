@@ -7,6 +7,7 @@ class_name Trigger
 func trigger():
 	if trigger_type == "DEATH":
 		GameEventBus.emit_signal("player_died")
+		AudioPlayer.playSFX(AudioPlayer.dieSFX)
 	
 	if trigger_type == "REMOVE":
 		GameEventBus.emit_signal("remove_initiated")

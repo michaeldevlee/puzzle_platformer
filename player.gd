@@ -32,6 +32,7 @@ func jump():
 	if Input.is_action_just_pressed("ui_up") and is_on_floor() and canMove and canJump:
 		velocity.y -= JUMP_FORCE
 		isJumping = true
+		AudioPlayer.playSFX(AudioPlayer.jumpSFX)
 		emit_signal("player_jumped")
 
 func updateAnims():

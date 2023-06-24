@@ -5,3 +5,4 @@ func collect():
 	collider.set_deferred("disabled", true)
 	visible = false
 	print('collected')
+	AudioPlayer.playSFX(AudioPlayer.collectSFX)
