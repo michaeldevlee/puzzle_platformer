@@ -4,4 +4,6 @@ extends Interactable
 signal teleport_started
 
 func interact():
-	emit_signal("teleport_started")
+	if destination_portal:
+		var player = get_tree().get_nodes_in_group("Player")[0]
+		player.global_position = destination_portal.global_position

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnhuf7u7or7w5"]
+
+[ext_resource type="PackedScene" uid="uid://dxpuxy8cv8rkx" path="res://Triggers/base_trigger.tscn" id="1_qg3k3"]
+[ext_resource type="Script" path="res://Triggers/remove_terrain_trigger.gd" id="2_2tjsk"]
+
+[node name="Remove Terrain Trigger" instance=ExtResource("1_qg3k3")]
+script = ExtResource("2_2tjsk")
+trigger_type = "REMOVE"

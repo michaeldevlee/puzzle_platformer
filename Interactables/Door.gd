@@ -5,4 +5,5 @@ extends Interactable
 func interact():
 	if type == "REAL":
 		GameEventBus.emit_signal("level_completed")
+		type = null
 

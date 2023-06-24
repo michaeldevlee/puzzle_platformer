@@ -22,6 +22,9 @@ func is_interactable(area):
 	
 	if area is Collectible:
 		area.collect()
+	
+	if area is Trigger:
+		area.trigger()
 
 func not_interactable(area):
 	if area.is_in_group("Interactable"):

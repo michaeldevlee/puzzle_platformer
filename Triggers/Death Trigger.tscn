@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxg53bpic50wg"]
+
+[ext_resource type="PackedScene" uid="uid://dxpuxy8cv8rkx" path="res://Triggers/base_trigger.tscn" id="1_nfh1b"]
+[ext_resource type="Script" path="res://Triggers/base_trigger.gd" id="2_fvbb5"]
+
+[node name="Death Trigger" instance=ExtResource("1_nfh1b")]
+script = ExtResource("2_fvbb5")

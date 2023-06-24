@@ -1,23 +1,23 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1ex3f8wv0bno"]
 
 [ext_resource type="Script" path="res://Globals/Scene Manager.gd" id="1_upjom"]
-[ext_resource type="PackedScene" uid="uid://dbdocamah70f1" path="res://Levels/Level Test 2.tscn" id="3_hpd3h"]
-[ext_resource type="PackedScene" uid="uid://2mfeg7xlovcd" path="res://Levels/Level Test 3.tscn" id="4_fk2qs"]
+[ext_resource type="PackedScene" uid="uid://c3o7vn4e2dyub" path="res://Levels/Level 2.tscn" id="2_ksbj2"]
+[ext_resource type="PackedScene" uid="uid://bpfs17kddyold" path="res://Levels/Level 3.tscn" id="3_8o8gb"]
 
-[sub_resource type="Animation" id="Animation_d8rt5"]
-resource_name = "Level Completed Fade"
+[sub_resource type="Animation" id="Animation_iqxta"]
+resource_name = "Level_Completed"
 length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TransitionScreen:modulate")
+tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 1.3, 2.7, 3),
+"times": PackedFloat32Array(1, 1.3, 2, 2.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -26,7 +26,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -34,12 +34,12 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_d4a00"]
+[sub_resource type="Animation" id="Animation_iectx"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TransitionScreen:modulate")
+tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,27 +49,26 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_e42uw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pge6y"]
 _data = {
-"Level Completed": SubResource("Animation_d8rt5"),
-"RESET": SubResource("Animation_d4a00")
+"Level_Completed": SubResource("Animation_iqxta"),
+"RESET": SubResource("Animation_iectx")
 }
 
 [node name="Scene Manager" type="CanvasLayer"]
 script = ExtResource("1_upjom")
-level_list = Array[PackedScene]([ExtResource("3_hpd3h"), ExtResource("4_fk2qs"), null])
+level_list = Array[PackedScene]([ExtResource("2_ksbj2"), ExtResource("3_8o8gb"), null, null, null])
 
-[node name="TransitionScreen" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_e42uw")
+"": SubResource("AnimationLibrary_pge6y")
 }

@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dxpuxy8cv8rkx"]
 
 [sub_resource type="GDScript" id="GDScript_uvsje"]
-script/source = "extends Interactable
+script/source = "extends Trigger
 
-@export_enum(\"DEATH\") var trigger_type = \"DEATH\"
 
 "
 

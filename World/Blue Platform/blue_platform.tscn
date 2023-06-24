@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp5553w4v0hws"]
+
+[ext_resource type="PackedScene" uid="uid://c5vgq0wgjyv54" path="res://World/base_platform.tscn" id="1_7hvlr"]
+[ext_resource type="Texture2D" uid="uid://cc2cfvu76pl6y" path="res://Images/Tiles/TileB1.png" id="2_apqby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btw13"]
+size = Vector2(16, 16)
+
+[node name="basic_platform" instance=ExtResource("1_7hvlr")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_apqby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_btw13")
