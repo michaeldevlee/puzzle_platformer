@@ -6,16 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/Door.tscn" id="5_jqxnf"]
 [ext_resource type="PackedScene" uid="uid://chjeixeop8gwx" path="res://player.tscn" id="6_b2syj"]
 [ext_resource type="PackedScene" uid="uid://dxg53bpic50wg" path="res://Triggers/Death Trigger.tscn" id="7_33t2e"]
-[ext_resource type="PackedScene" uid="uid://cnhuf7u7or7w5" path="res://Triggers/remove_terrain_trigger.tscn" id="8_5fvgf"]
 [ext_resource type="PackedScene" uid="uid://b1fyxisyf4wwm" path="res://Collectibles/Jump Up/Jump Up.tscn" id="8_t2l40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw5bg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64lmu"]
 size = Vector2(1056, 30)
 
-[node name="Level 3" node_paths=PackedStringArray("player", "start_point") instance=ExtResource("1_1x57e")]
+[node name="Level 3" node_paths=PackedStringArray("player", "start_point", "reset_node_group") instance=ExtResource("1_1x57e")]
 player_jumps = 5
 player = NodePath("Player")
 start_point = NodePath("Start Location")
+reset_node_group = NodePath("Reset Nodes")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -29,7 +31,10 @@ position = Vector2(240, 136)
 texture = ExtResource("2_2qioe")
 metadata/_edit_lock_ = true
 
-[node name="Terrain" type="Node2D" parent="." index="1"]
+[node name="Start Location" parent="." index="1"]
+position = Vector2(80, 220)
+
+[node name="Terrain" type="Node2D" parent="." index="2"]
 
 [node name="basic_platform4" parent="Terrain" index="0" instance=ExtResource("3_tyfy6")]
 position = Vector2(8, 264)
@@ -163,19 +168,22 @@ position = Vector2(872, 264)
 [node name="basic_platform63" parent="Terrain" index="43" instance=ExtResource("3_tyfy6")]
 position = Vector2(888, 264)
 
-[node name="Removable Terrain" type="Node2D" parent="." index="2"]
+[node name="Removable Terrain" type="Node2D" parent="." index="3"]
 
-[node name="Start Location" parent="." index="3"]
-position = Vector2(80, 220)
+[node name="Jump Up" parent="Reset Nodes" index="0" instance=ExtResource("8_t2l40")]
+position = Vector2(632, 216)
 
-[node name="Fake Door" parent="." index="4" instance=ExtResource("5_jqxnf")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reset Nodes/Jump Up" index="1"]
+shape = SubResource("RectangleShape2D_gw5bg")
+
+[node name="Fake Door" parent="." index="5" instance=ExtResource("5_jqxnf")]
 position = Vector2(696, 240)
 type = "FAKE"
 
-[node name="Real Door" parent="." index="5" instance=ExtResource("5_jqxnf")]
+[node name="Real Door" parent="." index="6" instance=ExtResource("5_jqxnf")]
 position = Vector2(864, 240)
 
-[node name="Player" parent="." index="6" instance=ExtResource("6_b2syj")]
+[node name="Player" parent="." index="7" instance=ExtResource("6_b2syj")]
 position = Vector2(80, 220)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
@@ -188,9 +196,9 @@ position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Bounds" type="Node2D" parent="." index="7"]
+[node name="Bounds" type="Node2D" parent="." index="8"]
 
-[node name="Triggers" type="Node2D" parent="." index="8"]
+[node name="Triggers" type="Node2D" parent="." index="9"]
 
 [node name="Death Trigger" parent="Triggers" index="0" instance=ExtResource("7_33t2e")]
 position = Vector2(276, 304)
@@ -199,11 +207,4 @@ position = Vector2(276, 304)
 position = Vector2(252, 5)
 shape = SubResource("RectangleShape2D_64lmu")
 
-[node name="Remove Terrain Trigger" parent="Triggers" index="1" node_paths=PackedStringArray("terrain_group") instance=ExtResource("8_5fvgf")]
-position = Vector2(864, 244)
-terrain_group = NodePath("../../Removable Terrain")
-
-[node name="Portals" type="Node2D" parent="." index="9"]
-
-[node name="Jump Up" parent="." index="10" instance=ExtResource("8_t2l40")]
-position = Vector2(632, 216)
+[node name="Portals" type="Node2D" parent="." index="10"]

@@ -7,7 +7,8 @@ const JUMP_FORCE = 400
 signal player_jumped
 
 @onready var animPlayer : AnimationPlayer = get_node("AnimationPlayer")
-@onready var sprite : Sprite2D = get_node("Sprite2D") 
+@onready var sprite : Sprite2D = get_node("Sprite2D")
+@export var camera : Camera2D 
 
 var isJumping = false
 var canMove = false

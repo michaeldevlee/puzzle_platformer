@@ -6,4 +6,6 @@ func interact():
 	if type == "REAL":
 		GameEventBus.emit_signal("level_completed")
 		type = null
+	else:
+		GameEventBus.emit_signal("player_died")
 

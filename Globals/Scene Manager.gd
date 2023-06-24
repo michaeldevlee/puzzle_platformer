@@ -10,7 +10,7 @@ func _ready():
 	
 func start_level_transition():
 	if (level_list[index]):
-		animPlayer.play("Level Completed")
+		animPlayer.play("Level_Completed")
 	else:
 		print('end of game!')
 

@@ -1,0 +1,283 @@
+[gd_scene load_steps=17 format=3 uid="uid://v5shmb146whr"]
+
+[ext_resource type="PackedScene" uid="uid://bt2j2b4d2nmo4" path="res://Levels/base_level.tscn" id="1_bpj2a"]
+[ext_resource type="Texture2D" uid="uid://lnpqlx6ai8nt" path="res://Images/BACKGROUND.png" id="2_jxqrq"]
+[ext_resource type="PackedScene" uid="uid://ccs1r1p65nfc4" path="res://World/Basic Platform/basic_platform.tscn" id="3_q6sdp"]
+[ext_resource type="PackedScene" uid="uid://dow8y6mpajx40" path="res://World/Blue Platform/blue_platform2.tscn" id="4_kdibm"]
+[ext_resource type="PackedScene" uid="uid://d4c550wcxx801" path="res://World/Blue Platform/blue_platform3.tscn" id="4_lctjy"]
+[ext_resource type="PackedScene" uid="uid://1j5lw3yuuya1" path="res://World/Red Platform/red_platform3.tscn" id="4_ugwr4"]
+[ext_resource type="PackedScene" uid="uid://dfy60j3vhp0q0" path="res://Interactables/Door.tscn" id="6_er2il"]
+[ext_resource type="PackedScene" uid="uid://chjeixeop8gwx" path="res://player.tscn" id="7_r1rw4"]
+[ext_resource type="PackedScene" uid="uid://dxg53bpic50wg" path="res://Triggers/Death Trigger.tscn" id="8_57yg0"]
+[ext_resource type="PackedScene" uid="uid://cnhuf7u7or7w5" path="res://Triggers/remove_terrain_trigger.tscn" id="8_ywikx"]
+[ext_resource type="PackedScene" uid="uid://dxm2pr8m70arr" path="res://Triggers/change_camera_trigger.tscn" id="9_0rgla"]
+[ext_resource type="PackedScene" uid="uid://bhjbhmvinypbi" path="res://Collectibles/Life/Life.tscn" id="10_7h67n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64lmu"]
+size = Vector2(772, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8kk0"]
+size = Vector2(196, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gos4"]
+size = Vector2(116, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkcut"]
+size = Vector2(480, 20)
+
+[node name="Level 5" node_paths=PackedStringArray("player", "start_point", "reset_node_group") instance=ExtResource("1_bpj2a")]
+player_jumps = 5
+player = NodePath("Player")
+start_point = NodePath("Start Location")
+reset_node_group = NodePath("Reset Nodes")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(0, 270)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+modulate = Color(0.509804, 0.509804, 0.509804, 1)
+position = Vector2(240, 136)
+texture = ExtResource("2_jxqrq")
+metadata/_edit_lock_ = true
+
+[node name="Terrain" type="Node2D" parent="." index="1"]
+
+[node name="basic_platform48" parent="Terrain" index="0" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 248)
+
+[node name="basic_platform49" parent="Terrain" index="1" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 232)
+
+[node name="basic_platform50" parent="Terrain" index="2" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 216)
+
+[node name="basic_platform51" parent="Terrain" index="3" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 200)
+
+[node name="basic_platform52" parent="Terrain" index="4" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 184)
+
+[node name="basic_platform53" parent="Terrain" index="5" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 168)
+
+[node name="basic_platform54" parent="Terrain" index="6" instance=ExtResource("3_q6sdp")]
+position = Vector2(-8, 152)
+
+[node name="basic_platform" parent="Terrain" index="7" instance=ExtResource("4_kdibm")]
+position = Vector2(8, 264)
+
+[node name="basic_platform2" parent="Terrain" index="8" instance=ExtResource("4_kdibm")]
+position = Vector2(24, 264)
+
+[node name="basic_platform3" parent="Terrain" index="9" instance=ExtResource("4_kdibm")]
+position = Vector2(40, 264)
+
+[node name="basic_platform4" parent="Terrain" index="10" instance=ExtResource("4_kdibm")]
+position = Vector2(56, 264)
+
+[node name="basic_platform5" parent="Terrain" index="11" instance=ExtResource("4_kdibm")]
+position = Vector2(72, 264)
+
+[node name="basic_platform6" parent="Terrain" index="12" instance=ExtResource("4_kdibm")]
+position = Vector2(88, 264)
+
+[node name="basic_platform7" parent="Terrain" index="13" instance=ExtResource("4_kdibm")]
+position = Vector2(104, 264)
+
+[node name="basic_platform11" parent="Terrain" index="14" instance=ExtResource("4_kdibm")]
+position = Vector2(168, 264)
+
+[node name="basic_platform12" parent="Terrain" index="15" instance=ExtResource("4_kdibm")]
+position = Vector2(184, 264)
+
+[node name="basic_platform13" parent="Terrain" index="16" instance=ExtResource("4_kdibm")]
+position = Vector2(200, 264)
+
+[node name="basic_platform14" parent="Terrain" index="17" instance=ExtResource("4_kdibm")]
+position = Vector2(216, 264)
+
+[node name="basic_platform15" parent="Terrain" index="18" instance=ExtResource("4_kdibm")]
+position = Vector2(232, 264)
+
+[node name="basic_platform16" parent="Terrain" index="19" instance=ExtResource("4_kdibm")]
+position = Vector2(248, 264)
+
+[node name="basic_platform17" parent="Terrain" index="20" instance=ExtResource("4_kdibm")]
+position = Vector2(264, 264)
+
+[node name="basic_platform18" parent="Terrain" index="21" instance=ExtResource("4_kdibm")]
+position = Vector2(280, 264)
+
+[node name="basic_platform21" parent="Terrain" index="22" instance=ExtResource("4_kdibm")]
+position = Vector2(120, 344)
+
+[node name="basic_platform22" parent="Terrain" index="23" instance=ExtResource("4_kdibm")]
+position = Vector2(136, 344)
+
+[node name="basic_platform23" parent="Terrain" index="24" instance=ExtResource("4_kdibm")]
+position = Vector2(152, 344)
+
+[node name="basic_platform26" parent="Terrain" index="25" instance=ExtResource("4_kdibm")]
+position = Vector2(280, 492)
+
+[node name="basic_platform27" parent="Terrain" index="26" instance=ExtResource("4_kdibm")]
+position = Vector2(296, 492)
+
+[node name="basic_platform33" parent="Terrain" index="27" instance=ExtResource("4_kdibm")]
+position = Vector2(216, 520)
+
+[node name="basic_platform34" parent="Terrain" index="28" instance=ExtResource("4_kdibm")]
+position = Vector2(232, 520)
+
+[node name="basic_platform37" parent="Terrain" index="29" instance=ExtResource("4_kdibm")]
+position = Vector2(424, 456)
+
+[node name="basic_platform38" parent="Terrain" index="30" instance=ExtResource("4_kdibm")]
+position = Vector2(440, 456)
+
+[node name="basic_platform28" parent="Terrain" index="31" instance=ExtResource("4_kdibm")]
+position = Vector2(312, 492)
+
+[node name="basic_platform29" parent="Terrain" index="32" instance=ExtResource("4_kdibm")]
+position = Vector2(328, 492)
+
+[node name="basic_platform30" parent="Terrain" index="33" instance=ExtResource("4_kdibm")]
+position = Vector2(344, 492)
+
+[node name="basic_platform31" parent="Terrain" index="34" instance=ExtResource("4_kdibm")]
+position = Vector2(360, 492)
+
+[node name="basic_platform32" parent="Terrain" index="35" instance=ExtResource("4_kdibm")]
+position = Vector2(376, 492)
+
+[node name="basic_platform8" parent="Terrain" index="36" instance=ExtResource("4_ugwr4")]
+position = Vector2(120, 488)
+
+[node name="basic_platform24" parent="Terrain" index="37" instance=ExtResource("4_ugwr4")]
+position = Vector2(120, 472)
+
+[node name="basic_platform25" parent="Terrain" index="38" instance=ExtResource("4_ugwr4")]
+position = Vector2(120, 456)
+
+[node name="basic_platform35" parent="Terrain" index="39" instance=ExtResource("4_ugwr4")]
+position = Vector2(120, 440)
+
+[node name="basic_platform36" parent="Terrain" index="40" instance=ExtResource("4_ugwr4")]
+position = Vector2(120, 424)
+
+[node name="basic_platform9" parent="Terrain" index="41" instance=ExtResource("4_ugwr4")]
+position = Vector2(104, 472)
+
+[node name="basic_platform10" parent="Terrain" index="42" instance=ExtResource("4_ugwr4")]
+position = Vector2(136, 472)
+
+[node name="basic_platform19" parent="Terrain" index="43" instance=ExtResource("4_ugwr4")]
+position = Vector2(152, 456)
+
+[node name="basic_platform20" parent="Terrain" index="44" instance=ExtResource("4_ugwr4")]
+position = Vector2(88, 456)
+
+[node name="Removable Terrain" type="Node2D" parent="." index="2"]
+
+[node name="basic_platform8" parent="Removable Terrain" index="0" instance=ExtResource("4_lctjy")]
+position = Vector2(120, 264)
+
+[node name="basic_platform9" parent="Removable Terrain" index="1" instance=ExtResource("4_lctjy")]
+position = Vector2(136, 264)
+
+[node name="basic_platform10" parent="Removable Terrain" index="2" instance=ExtResource("4_lctjy")]
+position = Vector2(152, 264)
+
+[node name="Start Location" parent="." index="3"]
+position = Vector2(80, 220)
+
+[node name="Door" type="Node2D" parent="." index="4"]
+
+[node name="Door" parent="Door" index="0" instance=ExtResource("6_er2il")]
+position = Vector2(432, 432)
+type = "FAKE"
+
+[node name="basic_platform39" parent="Door" index="1" instance=ExtResource("4_kdibm")]
+position = Vector2(112, 672)
+
+[node name="basic_platform40" parent="Door" index="2" instance=ExtResource("4_kdibm")]
+position = Vector2(128, 672)
+
+[node name="basic_platform41" parent="Door" index="3" instance=ExtResource("4_kdibm")]
+position = Vector2(80, 672)
+
+[node name="basic_platform42" parent="Door" index="4" instance=ExtResource("4_kdibm")]
+position = Vector2(96, 672)
+
+[node name="basic_platform43" parent="Door" index="5" instance=ExtResource("4_kdibm")]
+position = Vector2(144, 672)
+
+[node name="basic_platform44" parent="Door" index="6" instance=ExtResource("4_kdibm")]
+position = Vector2(160, 672)
+
+[node name="Door2" parent="Door" index="7" instance=ExtResource("6_er2il")]
+position = Vector2(120, 648)
+type = "FAKE"
+
+[node name="Player" parent="." index="5" node_paths=PackedStringArray("camera") instance=ExtResource("7_r1rw4")]
+position = Vector2(80, 220)
+camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="3"]
+limit_left = 0
+limit_top = 0
+limit_right = 480
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Bounds" type="Node2D" parent="." index="6"]
+
+[node name="Triggers" type="Node2D" parent="." index="7"]
+
+[node name="Death Trigger" parent="Triggers" index="0" instance=ExtResource("8_57yg0")]
+position = Vector2(276, 304)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Death Trigger" index="0"]
+position = Vector2(394, 5)
+shape = SubResource("RectangleShape2D_64lmu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Triggers/Death Trigger" index="1"]
+position = Vector2(104, 456)
+shape = SubResource("RectangleShape2D_64lmu")
+
+[node name="Remove Terrain Trigger" parent="Triggers" index="1" node_paths=PackedStringArray("terrain_group") instance=ExtResource("8_ywikx")]
+position = Vector2(376, 276)
+terrain_group = NodePath("../../Removable Terrain")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/Remove Terrain Trigger" index="0"]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_g8kk0")
+
+[node name="Portals" type="Node2D" parent="." index="8"]
+
+[node name="Life" parent="." index="9" instance=ExtResource("10_7h67n")]
+position = Vector2(344, 200)
+
+[node name="change_camera_trigger" parent="Reset Nodes" index="0" instance=ExtResource("9_0rgla")]
+position = Vector2(88, 312)
+side = 1
+trigger_type = "CAMERA"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reset Nodes/change_camera_trigger" index="0"]
+position = Vector2(50, -8)
+shape = SubResource("RectangleShape2D_7gos4")
+
+[node name="change_camera_trigger2" parent="Reset Nodes" index="1" instance=ExtResource("9_0rgla")]
+position = Vector2(60, 548)
+side = 1
+trigger_type = "CAMERA"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reset Nodes/change_camera_trigger2" index="0"]
+position = Vector2(180, 0)
+shape = SubResource("RectangleShape2D_xkcut")

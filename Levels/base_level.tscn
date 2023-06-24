@@ -7,3 +7,5 @@
 script = ExtResource("1_30kel")
 
 [node name="Start Location" parent="." instance=ExtResource("3_irplj")]
+
+[node name="Reset Nodes" type="Node2D" parent="." groups=["Reset Nodes"]]

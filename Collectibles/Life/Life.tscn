@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhjbhmvinypbi"]
+
+[ext_resource type="PackedScene" uid="uid://bt05iaexmk3e4" path="res://Collectibles/base_collectible.tscn" id="1_8aaga"]
+[ext_resource type="Texture2D" uid="uid://87i0ltjog3bq" path="res://icon.svg" id="2_mostc"]
+[ext_resource type="Script" path="res://Collectibles/Life/Life.gd" id="2_rbmpw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugyby"]
+
+[node name="Life" instance=ExtResource("1_8aaga")]
+script = ExtResource("2_rbmpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_mostc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_ugyby")

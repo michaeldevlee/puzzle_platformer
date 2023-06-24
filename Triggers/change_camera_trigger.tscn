@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxm2pr8m70arr"]
+
+[ext_resource type="PackedScene" uid="uid://dxpuxy8cv8rkx" path="res://Triggers/base_trigger.tscn" id="1_co5hh"]
+[ext_resource type="Script" path="res://Triggers/change_camera_trigger.gd" id="2_r8628"]
+
+[node name="change_camera_trigger" instance=ExtResource("1_co5hh")]
+script = ExtResource("2_r8628")
+side = 3
+amount = 270

@@ -1,7 +1,8 @@
 extends Area2D
 class_name Trigger
 
-@export_enum("DEATH", "REMOVE") var trigger_type = "DEATH"
+@export_enum("DEATH", "REMOVE", "REVEAL", "CAMERA") var trigger_type = "DEATH"
+@onready var collider = get_node("CollisionShape2D")
 
 func trigger():
 	if trigger_type == "DEATH":
