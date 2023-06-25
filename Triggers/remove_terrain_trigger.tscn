@@ -1,8 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnhuf7u7or7w5"]
+[gd_scene load_steps=4 format=3 uid="uid://cnhuf7u7or7w5"]
 
 [ext_resource type="PackedScene" uid="uid://dxpuxy8cv8rkx" path="res://Triggers/base_trigger.tscn" id="1_qg3k3"]
 [ext_resource type="Script" path="res://Triggers/remove_terrain_trigger.gd" id="2_2tjsk"]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6ji03"]
+emission_shape = 1
+emission_sphere_radius = 20.0
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+orbit_velocity_min = 1.0
+orbit_velocity_max = 2.0
+
 [node name="Remove Terrain Trigger" instance=ExtResource("1_qg3k3")]
 script = ExtResource("2_2tjsk")
 trigger_type = "REMOVE"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="0"]
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_6ji03")
+lifetime = 5.0

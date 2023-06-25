@@ -51,7 +51,7 @@ func check_game_state():
 	if player.camera:
 		player.camera.limit_top = 0
 	if (GameState.player_lives <= 0):
-		print('game over')
+		get_tree().change_scene_to_file("res://Menus/Game Over Menu.tscn")
 		return
 	
 	var start_loc = start_point.global_position

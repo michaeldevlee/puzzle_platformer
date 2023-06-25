@@ -67,3 +67,5 @@ func movement():
 		if is_on_floor() and isJumping:
 			isJumping = false
 		
+func finger_gun():
+	animPlayer.play("Finger_Guns")

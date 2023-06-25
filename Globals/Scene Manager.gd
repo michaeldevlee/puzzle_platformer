@@ -12,7 +12,7 @@ func start_level_transition():
 	if (level_list[index]):
 		animPlayer.play("Level_Completed")
 	else:
-		print('end of game!')
+		animPlayer.play("End Game Animation")
 
 func load_next_level():
 	get_tree().change_scene_to_packed(level_list[index])

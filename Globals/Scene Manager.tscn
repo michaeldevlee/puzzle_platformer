@@ -1,8 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1ex3f8wv0bno"]
+[gd_scene load_steps=16 format=3 uid="uid://b1ex3f8wv0bno"]
 
 [ext_resource type="Script" path="res://Globals/Scene Manager.gd" id="1_upjom"]
 [ext_resource type="PackedScene" uid="uid://c3o7vn4e2dyub" path="res://Levels/Level 2.tscn" id="2_ksbj2"]
 [ext_resource type="PackedScene" uid="uid://cx60cmddynk7i" path="res://Levels/Level 1.tscn" id="2_pnabm"]
+[ext_resource type="PackedScene" uid="uid://bpfs17kddyold" path="res://Levels/Level 3.tscn" id="3_8o8gb"]
+[ext_resource type="PackedScene" uid="uid://bvi4rh4c22smd" path="res://Levels/Level 4.tscn" id="3_evqpw"]
+[ext_resource type="Texture2D" uid="uid://ktpp4i7uag22" path="res://PlayerSprites/finger_guns1.png" id="4_pe3j8"]
+[ext_resource type="PackedScene" uid="uid://v5shmb146whr" path="res://Levels/Level 5.tscn" id="5_lewl2"]
+[ext_resource type="Texture2D" uid="uid://bn4y1x5pwxyf8" path="res://PlayerSprites/finger_guns2.png" id="5_u4a1b"]
+[ext_resource type="Texture2D" uid="uid://2xa0d7dq4y11" path="res://PlayerSprites/finger_guns3.png" id="6_wxg0c"]
+[ext_resource type="Texture2D" uid="uid://b3ug3qjv6ft11" path="res://PlayerSprites/finger_guns4.png" id="7_himcl"]
 
 [sub_resource type="Animation" id="Animation_iqxta"]
 resource_name = "Level_Completed"
@@ -48,16 +55,101 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 256)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(480, 270)]
+}
+
+[sub_resource type="Animation" id="Animation_a02wb"]
+resource_name = "End Game Animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.52549)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.7, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 256), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(480, 270)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pge6y"]
 _data = {
+"End Game Animation": SubResource("Animation_a02wb"),
 "Level_Completed": SubResource("Animation_iqxta"),
 "RESET": SubResource("Animation_iectx")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbrxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pe3j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u4a1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wxg0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_himcl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Scene Manager" type="CanvasLayer"]
 script = ExtResource("1_upjom")
-level_list = Array[PackedScene]([ExtResource("2_pnabm"), ExtResource("2_ksbj2"), null, null, null, null, null, null])
+level_list = Array[PackedScene]([ExtResource("2_pnabm"), ExtResource("2_ksbj2"), ExtResource("3_8o8gb"), ExtResource("3_evqpw"), ExtResource("5_lewl2"), null, null, null])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -72,3 +164,35 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_pge6y")
 }
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Thanks for playing!
+
+Programmer : James Lee
+
+Artist : Mark Lee
+
+Musician : Tommy Lee
+
+Waterboy :  Mike Lee"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
+position = Vector2(320, 128)
+sprite_frames = SubResource("SpriteFrames_qbrxq")
+autoplay = "default"
+frame_progress = 0.931831
+speed_scale = 2.0

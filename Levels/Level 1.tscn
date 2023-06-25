@@ -240,3 +240,12 @@ position = Vector2(276, 304)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Death Trigger" index="0"]
 position = Vector2(14, 5)
 shape = SubResource("RectangleShape2D_64lmu")
+
+[node name="Guide" type="Label" parent="." index="9"]
+offset_left = 12.0
+offset_top = 60.0
+offset_right = 52.0
+offset_bottom = 83.0
+text = "< > - move
+^  -  jump
+x - interact"
