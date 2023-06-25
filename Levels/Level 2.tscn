@@ -18,7 +18,7 @@ size = Vector2(1056, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6quh"]
 
 [node name="Level 2" node_paths=PackedStringArray("player", "start_point") instance=ExtResource("1_1x57e")]
-player_jumps = 2
+player_jumps = 3
 player = NodePath("Player")
 start_point = NodePath("Start Location")
 
@@ -108,16 +108,16 @@ position = Vector2(120, 264)
 [node name="basic_platform12" parent="Terrain" index="23" instance=ExtResource("3_tyfy6")]
 position = Vector2(136, 264)
 
-[node name="basic_platform13" parent="Terrain" index="24" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform13" parent="Terrain" index="24" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(152, 264)
 
-[node name="basic_platform14" parent="Terrain" index="25" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform14" parent="Terrain" index="25" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(168, 264)
 
-[node name="basic_platform15" parent="Terrain" index="26" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform15" parent="Terrain" index="26" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(184, 264)
 
-[node name="basic_platform16" parent="Terrain" index="27" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform16" parent="Terrain" index="27" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(200, 264)
 
 [node name="basic_platform17" parent="Terrain" index="28" instance=ExtResource("3_tyfy6")]
@@ -156,10 +156,10 @@ position = Vector2(376, 264)
 [node name="basic_platform45" parent="Terrain" index="39" instance=ExtResource("3_tyfy6")]
 position = Vector2(392, 200)
 
-[node name="basic_platform46" parent="Terrain" index="40" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform46" parent="Terrain" index="40" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(360, 200)
 
-[node name="basic_platform47" parent="Terrain" index="41" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform47" parent="Terrain" index="41" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(424, 200)
 
 [node name="basic_platform28" parent="Terrain" index="42" instance=ExtResource("3_tyfy6")]
@@ -183,7 +183,7 @@ position = Vector2(392, 264)
 [node name="basic_platform64" parent="Terrain" index="48" instance=ExtResource("3_tyfy6")]
 position = Vector2(408, 264)
 
-[node name="basic_platform37" parent="Terrain" index="49" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform37" parent="Terrain" index="49" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(472, 264)
 
 [node name="basic_platform38" parent="Terrain" index="50" instance=ExtResource("3_tyfy6")]
@@ -213,7 +213,7 @@ position = Vector2(808, 264)
 [node name="basic_platform34" parent="Terrain" index="58" instance=ExtResource("3_tyfy6")]
 position = Vector2(824, 264)
 
-[node name="basic_platform35" parent="Terrain" index="59" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform35" parent="Terrain" index="59" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(840, 264)
 
 [node name="basic_platform63" parent="Terrain" index="60" instance=ExtResource("3_tyfy6")]
@@ -304,6 +304,7 @@ position = Vector2(480, 244)
 destination_portal = NodePath("../portal2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portals/portal" index="0"]
+position = Vector2(-88, -64)
 shape = SubResource("RectangleShape2D_c6quh")
 
 [node name="portal2" parent="Portals" index="1" node_paths=PackedStringArray("destination_portal") instance=ExtResource("9_ap83j")]

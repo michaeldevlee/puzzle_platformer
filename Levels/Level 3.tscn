@@ -126,46 +126,40 @@ position = Vector2(376, 264)
 [node name="basic_platform24" parent="Terrain" index="29" instance=ExtResource("3_tyfy6")]
 position = Vector2(472, 264)
 
-[node name="basic_platform25" parent="Terrain" index="30" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform25" parent="Terrain" index="30" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(488, 264)
 
-[node name="basic_platform28" parent="Terrain" index="31" instance=ExtResource("3_tyfy6")]
-position = Vector2(760, 264)
-
-[node name="basic_platform29" parent="Terrain" index="32" instance=ExtResource("3_tyfy6")]
-position = Vector2(776, 264)
-
-[node name="basic_platform30" parent="Terrain" index="33" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform30" parent="Terrain" index="31" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(792, 264)
 
-[node name="basic_platform31" parent="Terrain" index="34" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform31" parent="Terrain" index="32" instance=ExtResource("3_tyfy6")]
 position = Vector2(808, 264)
 
-[node name="basic_platform36" parent="Terrain" index="35" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform36" parent="Terrain" index="33" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(680, 264)
 
-[node name="basic_platform44" parent="Terrain" index="36" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform44" parent="Terrain" index="34" instance=ExtResource("3_tyfy6")]
 position = Vector2(584, 264)
 
-[node name="basic_platform37" parent="Terrain" index="37" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform37" parent="Terrain" index="35" instance=ExtResource("3_tyfy6")]
 position = Vector2(696, 264)
 
-[node name="basic_platform38" parent="Terrain" index="38" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform38" parent="Terrain" index="36" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(712, 264)
 
-[node name="basic_platform32" parent="Terrain" index="39" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform32" parent="Terrain" index="37" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(824, 264)
 
-[node name="basic_platform33" parent="Terrain" index="40" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform33" parent="Terrain" index="38" groups=["destruct"] instance=ExtResource("3_tyfy6")]
 position = Vector2(840, 264)
 
-[node name="basic_platform34" parent="Terrain" index="41" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform34" parent="Terrain" index="39" instance=ExtResource("3_tyfy6")]
 position = Vector2(856, 264)
 
-[node name="basic_platform35" parent="Terrain" index="42" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform35" parent="Terrain" index="40" instance=ExtResource("3_tyfy6")]
 position = Vector2(872, 264)
 
-[node name="basic_platform63" parent="Terrain" index="43" instance=ExtResource("3_tyfy6")]
+[node name="basic_platform63" parent="Terrain" index="41" instance=ExtResource("3_tyfy6")]
 position = Vector2(888, 264)
 
 [node name="Removable Terrain" type="Node2D" parent="." index="3"]

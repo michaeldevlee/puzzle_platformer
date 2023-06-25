@@ -113,10 +113,10 @@ position = Vector2(152, 264)
 [node name="basic_platform14" parent="Terrain" index="24" instance=ExtResource("3_20m7g")]
 position = Vector2(168, 264)
 
-[node name="basic_platform15" parent="Terrain" index="25" instance=ExtResource("3_20m7g")]
+[node name="basic_platform15" parent="Terrain" index="25" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(184, 264)
 
-[node name="basic_platform16" parent="Terrain" index="26" instance=ExtResource("3_20m7g")]
+[node name="basic_platform16" parent="Terrain" index="26" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(200, 264)
 
 [node name="basic_platform17" parent="Terrain" index="27" instance=ExtResource("3_20m7g")]
@@ -128,22 +128,22 @@ position = Vector2(232, 264)
 [node name="basic_platform19" parent="Terrain" index="29" instance=ExtResource("3_20m7g")]
 position = Vector2(248, 264)
 
-[node name="basic_platform20" parent="Terrain" index="30" instance=ExtResource("3_20m7g")]
+[node name="basic_platform20" parent="Terrain" index="30" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(264, 264)
 
-[node name="basic_platform21" parent="Terrain" index="31" instance=ExtResource("3_20m7g")]
+[node name="basic_platform21" parent="Terrain" index="31" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(280, 264)
 
-[node name="basic_platform22" parent="Terrain" index="32" instance=ExtResource("3_20m7g")]
+[node name="basic_platform22" parent="Terrain" index="32" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(296, 264)
 
-[node name="basic_platform23" parent="Terrain" index="33" instance=ExtResource("3_20m7g")]
+[node name="basic_platform23" parent="Terrain" index="33" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(312, 264)
 
-[node name="basic_platform24" parent="Terrain" index="34" instance=ExtResource("3_20m7g")]
+[node name="basic_platform24" parent="Terrain" index="34" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(328, 264)
 
-[node name="basic_platform25" parent="Terrain" index="35" instance=ExtResource("3_20m7g")]
+[node name="basic_platform25" parent="Terrain" index="35" groups=["destruct"] instance=ExtResource("3_20m7g")]
 position = Vector2(344, 264)
 
 [node name="basic_platform26" parent="Terrain" index="36" instance=ExtResource("3_20m7g")]

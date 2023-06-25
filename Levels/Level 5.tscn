@@ -108,16 +108,16 @@ position = Vector2(248, 264)
 [node name="basic_platform17" parent="Terrain" index="20" instance=ExtResource("4_kdibm")]
 position = Vector2(264, 264)
 
-[node name="basic_platform18" parent="Terrain" index="21" instance=ExtResource("4_kdibm")]
+[node name="basic_platform18" parent="Terrain" index="21" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(280, 264)
 
-[node name="basic_platform21" parent="Terrain" index="22" instance=ExtResource("4_kdibm")]
+[node name="basic_platform21" parent="Terrain" index="22" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(120, 344)
 
 [node name="basic_platform22" parent="Terrain" index="23" instance=ExtResource("4_kdibm")]
 position = Vector2(136, 344)
 
-[node name="basic_platform23" parent="Terrain" index="24" instance=ExtResource("4_kdibm")]
+[node name="basic_platform23" parent="Terrain" index="24" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(152, 344)
 
 [node name="basic_platform26" parent="Terrain" index="25" instance=ExtResource("4_kdibm")]
@@ -129,10 +129,10 @@ position = Vector2(296, 492)
 [node name="basic_platform33" parent="Terrain" index="27" instance=ExtResource("4_kdibm")]
 position = Vector2(216, 520)
 
-[node name="basic_platform34" parent="Terrain" index="28" instance=ExtResource("4_kdibm")]
+[node name="basic_platform34" parent="Terrain" index="28" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(232, 520)
 
-[node name="basic_platform37" parent="Terrain" index="29" instance=ExtResource("4_kdibm")]
+[node name="basic_platform37" parent="Terrain" index="29" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(424, 456)
 
 [node name="basic_platform38" parent="Terrain" index="30" instance=ExtResource("4_kdibm")]
@@ -203,22 +203,16 @@ type = "FAKE"
 [node name="basic_platform39" parent="Door" index="1" instance=ExtResource("4_kdibm")]
 position = Vector2(112, 672)
 
-[node name="basic_platform40" parent="Door" index="2" instance=ExtResource("4_kdibm")]
+[node name="basic_platform40" parent="Door" index="2" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(128, 672)
 
-[node name="basic_platform41" parent="Door" index="3" instance=ExtResource("4_kdibm")]
-position = Vector2(80, 672)
-
-[node name="basic_platform42" parent="Door" index="4" instance=ExtResource("4_kdibm")]
+[node name="basic_platform42" parent="Door" index="3" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(96, 672)
 
-[node name="basic_platform43" parent="Door" index="5" instance=ExtResource("4_kdibm")]
+[node name="basic_platform43" parent="Door" index="4" groups=["destruct"] instance=ExtResource("4_kdibm")]
 position = Vector2(144, 672)
 
-[node name="basic_platform44" parent="Door" index="6" instance=ExtResource("4_kdibm")]
-position = Vector2(160, 672)
-
-[node name="Door2" parent="Door" index="7" instance=ExtResource("6_er2il")]
+[node name="Door2" parent="Door" index="5" instance=ExtResource("6_er2il")]
 position = Vector2(120, 648)
 
 [node name="Player" parent="." index="5" node_paths=PackedStringArray("camera") instance=ExtResource("7_r1rw4")]

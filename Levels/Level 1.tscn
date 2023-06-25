@@ -97,13 +97,13 @@ position = Vector2(104, 264)
 [node name="basic_platform11" parent="Terrain" index="22" instance=ExtResource("2_urok8")]
 position = Vector2(120, 264)
 
-[node name="basic_platform12" parent="Terrain" index="23" instance=ExtResource("2_urok8")]
+[node name="basic_platform12" parent="Terrain" index="23" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(136, 264)
 
 [node name="basic_platform13" parent="Terrain" index="24" instance=ExtResource("2_urok8")]
 position = Vector2(152, 264)
 
-[node name="basic_platform14" parent="Terrain" index="25" instance=ExtResource("2_urok8")]
+[node name="basic_platform14" parent="Terrain" index="25" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(168, 264)
 
 [node name="basic_platform15" parent="Terrain" index="26" instance=ExtResource("2_urok8")]
@@ -118,10 +118,10 @@ position = Vector2(216, 264)
 [node name="basic_platform18" parent="Terrain" index="29" instance=ExtResource("2_urok8")]
 position = Vector2(232, 264)
 
-[node name="basic_platform19" parent="Terrain" index="30" instance=ExtResource("2_urok8")]
+[node name="basic_platform19" parent="Terrain" index="30" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(248, 264)
 
-[node name="basic_platform20" parent="Terrain" index="31" instance=ExtResource("2_urok8")]
+[node name="basic_platform20" parent="Terrain" index="31" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(312, 264)
 
 [node name="basic_platform21" parent="Terrain" index="32" instance=ExtResource("2_urok8")]
@@ -160,10 +160,10 @@ position = Vector2(392, 220)
 [node name="basic_platform36" parent="Terrain" index="43" instance=ExtResource("2_urok8")]
 position = Vector2(244, 172)
 
-[node name="basic_platform37" parent="Terrain" index="44" instance=ExtResource("2_urok8")]
+[node name="basic_platform37" parent="Terrain" index="44" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(260, 172)
 
-[node name="basic_platform38" parent="Terrain" index="45" instance=ExtResource("2_urok8")]
+[node name="basic_platform38" parent="Terrain" index="45" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(276, 172)
 
 [node name="basic_platform39" parent="Terrain" index="46" instance=ExtResource("2_urok8")]
@@ -172,10 +172,10 @@ position = Vector2(292, 172)
 [node name="basic_platform40" parent="Terrain" index="47" instance=ExtResource("2_urok8")]
 position = Vector2(248, 80)
 
-[node name="basic_platform41" parent="Terrain" index="48" instance=ExtResource("2_urok8")]
+[node name="basic_platform41" parent="Terrain" index="48" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(264, 80)
 
-[node name="basic_platform42" parent="Terrain" index="49" instance=ExtResource("2_urok8")]
+[node name="basic_platform42" parent="Terrain" index="49" groups=["destruct"] instance=ExtResource("2_urok8")]
 position = Vector2(280, 80)
 
 [node name="basic_platform43" parent="Terrain" index="50" instance=ExtResource("2_urok8")]

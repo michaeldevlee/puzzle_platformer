@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt2j2b4d2nmo4"]
+[gd_scene load_steps=4 format=3 uid="uid://bt2j2b4d2nmo4"]
 
 [ext_resource type="Script" path="res://Levels/base_level.gd" id="1_30kel"]
+[ext_resource type="PackedScene" uid="uid://k0sn81o0qdyo" path="res://UI/HUD.tscn" id="3_fpvpd"]
 [ext_resource type="PackedScene" uid="uid://cx2u8krtx1ctg" path="res://Locations/start_location.tscn" id="3_irplj"]
 
-[node name="base_level" type="Node2D"]
+[node name="base_level" type="Node2D" node_paths=PackedStringArray("HUD")]
 script = ExtResource("1_30kel")
+HUD = NodePath("HUD")
 
 [node name="Start Location" parent="." instance=ExtResource("3_irplj")]
 
 [node name="Reset Nodes" type="Node2D" parent="." groups=["Reset Nodes"]]
+
+[node name="HUD" parent="." instance=ExtResource("3_fpvpd")]
